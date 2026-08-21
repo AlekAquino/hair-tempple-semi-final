@@ -1,0 +1,26 @@
+name: Melhoria ou nova função
+description: Propor uma melhoria visual, de conteúdo ou de comportamento
+title: "[Melhoria] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Explique o resultado desejado.
+    validations:
+      required: true
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo
+      description: Liste páginas, componentes, conteúdos e assets envolvidos.
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de aceite
+      description: Liste as condições necessárias para aprovação.
+    validations:
+      required: true

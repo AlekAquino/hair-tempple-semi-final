@@ -1,0 +1,24 @@
+name: Correção
+description: Registrar um defeito ou comportamento incorreto
+title: "[Correção] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Descreva o que acontece e o resultado esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências
+      description: Informe página, dispositivo, largura de tela e capturas quando disponíveis.
+  - type: textarea
+    id: validacao
+    attributes:
+      label: Critérios de validação
+      description: Liste como confirmar que a correção funcionou.
+    validations:
+      required: true

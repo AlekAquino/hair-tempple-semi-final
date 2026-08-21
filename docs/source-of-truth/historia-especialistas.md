@@ -1,0 +1,5 @@
+Olá, somos as especialistas Jerusa e Valesca. Um pouco da nossa história...
+Crescemos em uma família onde a beleza e o cuidado com os cabelos atravessam gerações. Desde cedo, acompanhamos de perto o trabalho da nossa mãe, Suzete Nowitski, referência em beleza e caracterização. Foi dentro desse universo que nasceu a nossa paixão pela profissão.
+Hoje, somamos mais de 25 anos de experiência cada uma, unindo tradição familiar, conhecimento técnico e constante aperfeiçoamento. À frente do Hair Tempple Mega Hair, damos continuidade a uma história construída há décadas, com foco em técnicas de alongamento e transformações personalizadas.
+Para nós, Mega Hair vai muito além de comprimento e volume. Cada cabelo tem uma história, e cada transformação precisa respeitar a identidade de quem o usa.
+Hair Tempple — há 40 anos transformando vidas e realçando a beleza de quem faz parte da nossa história.

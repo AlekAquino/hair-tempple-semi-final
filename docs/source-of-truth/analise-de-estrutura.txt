@@ -1,0 +1,2068 @@
+Análise de Estrutura de Página
+https://chatgpt.com/c/6a7f5e11-5358-83e9-9bd4-ca02c277756b
+Created: August 14, 2026 at 03:27 PM
+Updated: August 14, 2026 at 07:50 PM
+Exported: August 14, 2026 at 07:50 PM
+
+========================================
+
+[USER]:
+Descido do que esse será é o estilo da página versão clara escura depende do celular eu prescindo que vc análise profundamente a página e estrutura e me dê os json das imagem  para futura construção do httml todas dentro de um bloco de código separado e um contendo todos
+
+[CHATGPT]:
+Vou tratar as 7 referências como um sistema visual responsivo: identificar o papel de cada imagem, separar conteúdo real de wireframe, definir a troca claro/escuro conforme o aparelho e entregar um JSON por imagem mais um JSON consolidado para orientar o futuro HTML/CSS. Não vou gerar nem alterar nenhuma imagem agora.
+
+[CHATGPT]:
+A leitura principal já está clara: as imagens 1 e 2 são composições finais completas; 3 e 4 são wireframes/skeletons; 5 e 6 são o mesmo fundo escuro duplicado; 7 é o fundo claro. Para o HTML, a página não deve ser inserida como uma imagem única — ela precisa ser desmontada em seções, componentes, textos e fotos independentes.
+
+[CHATGPT]:
+A página tem uma direção visual forte e coerente: luxo editorial, mármore, preto, marfim e dourado. O ideal é implementar dois temas reais no HTML, selecionados inicialmente por prefers-color-scheme, com opção manual salva no navegador.
+
+Pontos importantes da análise:
+As imagens 1 e 2 são referências visuais completas, não devem virar uma única imagem de fundo.
+As imagens 3 e 4 são wireframes e servem somente para estrutura/espaçamento.
+As imagens 5 e 6 são arquivos exatamente idênticos. Apenas um precisa ser usado.
+A imagem 7 é a textura correspondente ao tema claro.
+Os textos estão pequenos demais na referência mobile. No HTML, os blocos devem reorganizar-se responsivamente.
+“Antes e depois”, depoimentos e galeria funcionam melhor como carrosséis com scroll-snap no celular.
+Logo, ícones e ornamentos devem preferencialmente ser SVG.
+Fotos precisam ser exportadas individualmente em AVIF/WebP, não recortadas das referências.
+Imagem 1 — composição final clara
+
+`json
+{
+  "id": "referencepagelight",
+  "source_file": "A8D27BA9-021F-42B0-89A7-EB5C81E87F31.jpeg",
+  "dimensions": {
+    "width": 728,
+    "height": 1536,
+    "aspect_ratio": "0.474:1"
+  },
+  "classification": "referenciavisualcompleta",
+  "theme": "light",
+  "useinhtml": false,
+  "purpose": "Orientar cores, tipografia, hierarquia, composição e conteúdo do tema claro.",
+  "donotuse_as": [
+    "imagem única da página",
+    "background completo",
+    "substituto de elementos HTML",
+    "fonte definitiva de textos"
+  ],
+  "visual_style": {
+    "concept": "salão de beleza premium com estética editorial",
+    "background": "mármore marfim muito claro com veios dourados discretos",
+    "primary_text": "#201A16",
+    "secondary_text": "#644F3F",
+    "accent": "#A27438",
+    "accent_soft": "#DDBD90",
+    "surface": "#FBF2E6",
+    "border": "#E6D0B1",
+    "heading_style": "serifa editorial de alto contraste",
+    "body_style": "sans-serif geométrica e limpa",
+    "buttons": "dourado com leve gradiente, texto claro e cantos arredondados"
+  },
+  "page_sections": [
+    {
+      "order": 1,
+      "id": "header_hero",
+      "layout": "menu e logo no topo; texto à esquerda; modelo de costas à direita; CTA superior e CTA principal"
+    },
+    {
+      "order": 2,
+      "id": "benefits_bar",
+      "layout": "quatro benefícios horizontais com ícones"
+    },
+    {
+      "order": 3,
+      "id": "results",
+      "layout": "título central, três comparadores antes/depois e CTA"
+    },
+    {
+      "order": 4,
+      "id": "services",
+      "layout": "cinco serviços com ícones circulares"
+    },
+    {
+      "order": 5,
+      "id": "whyhairtemple",
+      "layout": "quatro diferenciais dentro de painel contornado"
+    },
+    {
+      "order": 6,
+      "id": "specialists_story",
+      "layout": "foto das especialistas, narrativa institucional e painel de números"
+    },
+    {
+      "order": 7,
+      "id": "testimonials",
+      "layout": "dois cards de avaliações Google com navegação"
+    },
+    {
+      "order": 8,
+      "id": "inspiration_gallery",
+      "layout": "galeria horizontal de oito fotografias"
+    },
+    {
+      "order": 9,
+      "id": "finalctafooter",
+      "layout": "mensagem final, botão WhatsApp, localização e Instagram"
+    }
+  ],
+  "recommendedcssrole": "referência do conjunto de tokens [data-theme='light']",
+  "reconstruction_prompt": "Reconstruir como interface HTML semântica responsiva, preservando a estética editorial premium em mármore marfim, dourado quente, títulos serifados e textos escuros. Não incorporar textos dentro das imagens."
+}
+`
+Imagem 2 — composição final escura
+
+`json
+{
+  "id": "referencepagedark",
+  "source_file": "1EB0D984-45CD-4B47-926A-3DDCFE48C5D6.jpeg",
+  "dimensions": {
+    "width": 729,
+    "height": 1536,
+    "aspect_ratio": "0.475:1"
+  },
+  "classification": "referenciavisualcompleta",
+  "theme": "dark",
+  "useinhtml": false,
+  "purpose": "Orientar a versão escura da mesma página e confirmar que conteúdo e estrutura permanecem iguais.",
+  "donotuse_as": [
+    "imagem única da página",
+    "background completo",
+    "substituto do HTML",
+    "textura recortada"
+  ],
+  "visual_style": {
+    "concept": "luxo noturno com mármore negro e detalhes dourados",
+    "background": "#020202",
+    "surface": "#0D0C0A",
+    "surface_elevated": "#15110D",
+    "primary_text": "#F4EADF",
+    "secondary_text": "#B6A391",
+    "accent": "#BE8F4D",
+    "accent_highlight": "#DDBD90",
+    "border": "#49392A",
+    "heading_style": "serifa editorial dourada ou marfim",
+    "body_style": "sans-serif clara e compacta",
+    "buttons": "gradiente dourado, texto marfim e sombra discreta"
+  },
+  "content_relationship": {
+    "samestructureas": "referencepagelight",
+    "changes_only": [
+      "paleta",
+      "textura de fundo",
+      "contraste de textos",
+      "cores de bordas",
+      "tratamento das superfícies"
+    ]
+  },
+  "recommendedcssrole": "referência do conjunto de tokens [data-theme='dark']",
+  "accessibility_requirements": [
+    "texto comum com contraste mínimo de 4.5:1",
+    "não usar dourado escuro em tamanho pequeno sobre preto",
+    "usar marfim para parágrafos longos",
+    "preservar foco visível em botões e links"
+  ],
+  "reconstruction_prompt": "Reconstruir a mesma interface do tema claro em mármore negro, superfícies quase pretas, bordas douradas finas, títulos editoriais e fotografias quentes. Manter conteúdo, ordem e funcionalidade idênticos ao tema claro."
+}
+`
+Imagem 3 — wireframe escuro
+
+`json
+{
+  "id": "wireframe_dark",
+  "source_file": "8215F8B2-6CAA-490F-A696-7A70B58A7C10.jpeg",
+  "dimensions": {
+    "width": 900,
+    "height": 1600,
+    "aspect_ratio": "9:16"
+  },
+  "classification": "wireframe_estrutural",
+  "theme": "dark",
+  "useinhtml": false,
+  "purpose": "Documentar proporções, alinhamentos, agrupamentos e ritmo vertical.",
+  "structure_detected": [
+    "cabeçalho com menu, logo e CTA",
+    "hero em duas colunas",
+    "barra de benefícios",
+    "seção com três comparadores",
+    "grade com cinco serviços",
+    "faixa com quatro diferenciais",
+    "bloco institucional em três áreas",
+    "carrossel de dois depoimentos",
+    "galeria com oito miniaturas",
+    "CTA final"
+  ],
+  "layout_rules": {
+    "outer_container": "aproximadamente 90% da largura",
+    "section_spacing": "compacto e contínuo",
+    "border_radius": "12px a 20px",
+    "border_style": "1px dourado translúcido",
+    "alignment": "predominantemente central, com textos institucionais alinhados à esquerda",
+    "visual_separators": "linhas horizontais finas com pequeno ornamento central"
+  },
+  "mobile_correction": {
+    "problem": "o wireframe mantém muitas colunas simultâneas, reduzindo excessivamente textos e controles",
+    "solution": [
+      "hero empilhado abaixo de 768px",
+      "benefícios em carrossel ou grade 2x2",
+      "comparadores em scroll horizontal",
+      "serviços em grade de duas colunas",
+      "bloco institucional empilhado",
+      "depoimentos um por vez",
+      "galeria com scroll-snap"
+    ]
+  },
+  "reconstruction_prompt": "Usar somente como mapa estrutural. Transformar os blocos desenhados em componentes HTML responsivos, sem reproduzir o wireframe como imagem."
+}
+`
+Imagem 4 — wireframe claro
+
+`json
+{
+  "id": "wireframe_light",
+  "source_file": "B7BE4FC2-C651-466B-BD8F-9CF9BC5DC0EE.jpeg",
+  "dimensions": {
+    "width": 900,
+    "height": 1600,
+    "aspect_ratio": "9:16"
+  },
+  "classification": "wireframe_estrutural",
+  "theme": "light",
+  "useinhtml": false,
+  "purpose": "Confirmar que o tema claro usa exatamente a mesma arquitetura do tema escuro.",
+  "structure_relationship": {
+    "samelayoutas": "wireframe_dark",
+    "themeonlychange": true
+  },
+  "layout_characteristics": {
+    "background": "mármore claro",
+    "cards": "superfícies marfim quase transparentes",
+    "borders": "dourado claro e discreto",
+    "primary_cta": "botão preenchido com gradiente dourado",
+    "secondary_cta": "botão transparente contornado",
+    "section_titles": "centralizados com linhas ornamentais"
+  },
+  "recommendedcomponentmodel": [
+    "Header",
+    "Hero",
+    "BenefitBar",
+    "BeforeAfterGallery",
+    "ServicesGrid",
+    "DifferentialsPanel",
+    "AboutSpecialists",
+    "TestimonialsCarousel",
+    "InspirationGallery",
+    "FinalCTA",
+    "Footer"
+  ],
+  "reconstruction_prompt": "Usar como referência geométrica do tema claro. Todos os espaços devem ser reconstruídos com CSS Grid, Flexbox, container queries e componentes HTML reais."
+}
+`
+Imagem 5 — mármore escuro
+
+`json
+{
+  "id": "darkmarblebackground_primary",
+  "source_file": "3330CA5A-63BE-4D25-8527-8ADDE08CAC4E.jpeg",
+  "dimensions": {
+    "width": 740,
+    "height": 1600,
+    "aspect_ratio": "0.4625:1"
+  },
+  "classification": "texturadebackground",
+  "theme": "dark",
+  "useinhtml": true,
+  "duplicate_of": null,
+  "visual_description": "Mármore quase preto, com veios diagonais extremamente discretos em marrom, bronze e cinza.",
+  "dominant_colors": [
+    "#020202",
+    "#0C0A08",
+    "#0F0D0A"
+  ],
+  "recommendedassetoutput": {
+    "filename": "marble-dark",
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "fallback": "jpeg",
+    "target_widths": [
+      740,
+      1280,
+      1920
+    ]
+  },
+  "css": {
+    "background_color": "#020202",
+    "background_image": "url('/assets/backgrounds/marble-dark.avif')",
+    "background_repeat": "repeat-y",
+    "background_position": "top center",
+    "background_size": "100% auto"
+  },
+  "performance": {
+    "loading": "eager",
+    "reason": "textura presente desde a primeira dobra",
+    "compression_priority": "alta",
+    "suggested_overlay": "linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.18))"
+  },
+  "alt": "",
+  "accessibility_note": "Por ser decorativa, deve ser aplicada via CSS e não receber texto alternativo."
+}
+`
+Imagem 6 — duplicata do mármore escuro
+
+`json
+{
+  "id": "darkmarblebackground_duplicate",
+  "source_file": "E69073D7-624A-4D36-A9B3-E08BB0D92ACC.jpeg",
+  "dimensions": {
+    "width": 740,
+    "height": 1600,
+    "aspect_ratio": "0.4625:1"
+  },
+  "classification": "duplicata_exata",
+  "theme": "dark",
+  "useinhtml": false,
+  "duplicateof": "darkmarblebackgroundprimary",
+  "verification": {
+    "method": "sha256",
+    "result": "arquivos idênticos byte a byte",
+    "sha256": "e83e69b4cc7d20355662a35387c62ee3900fc25aa4db677107a74a19acb15e0d"
+  },
+  "recommended_action": "Não exportar nem carregar este arquivo. Manter somente a imagem 5 para evitar duplicação de peso e cache.",
+  "replacement_reference": "/assets/backgrounds/marble-dark.avif"
+}
+`
+Imagem 7 — mármore claro
+
+`json
+{
+  "id": "lightmarblebackground",
+  "source_file": "C30DB2A4-757D-47D5-8D5C-3F332750EC84.jpeg",
+  "dimensions": {
+    "width": 757,
+    "height": 1600,
+    "aspect_ratio": "0.473:1"
+  },
+  "classification": "texturadebackground",
+  "theme": "light",
+  "useinhtml": true,
+  "visual_description": "Mármore marfim muito claro, com veios bege e dourados de baixa intensidade.",
+  "dominant_colors": [
+    "#F5ECE2",
+    "#F6EEE4",
+    "#FBF2E6"
+  ],
+  "recommendedassetoutput": {
+    "filename": "marble-light",
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "fallback": "jpeg",
+    "target_widths": [
+      757,
+      1280,
+      1920
+    ]
+  },
+  "css": {
+    "background_color": "#F6EEE4",
+    "background_image": "url('/assets/backgrounds/marble-light.avif')",
+    "background_repeat": "repeat-y",
+    "background_position": "top center",
+    "background_size": "100% auto"
+  },
+  "performance": {
+    "loading": "eager",
+    "compression_priority": "alta",
+    "suggested_overlay": "linear-gradient(rgba(255,250,244,0.08), rgba(255,250,244,0.16))"
+  },
+  "alt": "",
+  "accessibility_note": "Aplicar via CSS como elemento decorativo, sem alt."
+}
+`
+JSON consolidado para a futura construção
+
+`json
+{
+  "project": {
+    "name": "Hair Temple Landing Page",
+    "language": "pt-BR",
+    "type": "landingpageresponsiva",
+    "visual_concept": "luxo editorial, beleza premium, mármore, dourado e fotografia capilar",
+    "theme_strategy": {
+      "default": "system",
+      "system_detection": "prefers-color-scheme",
+      "manual_toggle": true,
+      "persistuserchoice": "localStorage",
+      "html_attribute": "data-theme",
+      "values": [
+        "light",
+        "dark"
+      ],
+      "important_note": "A escolha depende da preferência de aparência configurada no aparelho, não do modelo do celular."
+    }
+  },
+  "images": [
+    {
+      "id": "referencepagelight",
+      "file": "A8D27BA9-021F-42B0-89A7-EB5C81E87F31.jpeg",
+      "dimensions": "728x1536",
+      "role": "referência final do tema claro",
+      "theme": "light",
+      "production_asset": false
+    },
+    {
+      "id": "referencepagedark",
+      "file": "1EB0D984-45CD-4B47-926A-3DDCFE48C5D6.jpeg",
+      "dimensions": "729x1536",
+      "role": "referência final do tema escuro",
+      "theme": "dark",
+      "production_asset": false
+    },
+    {
+      "id": "wireframe_dark",
+      "file": "8215F8B2-6CAA-490F-A696-7A70B58A7C10.jpeg",
+      "dimensions": "900x1600",
+      "role": "mapa estrutural escuro",
+      "theme": "dark",
+      "production_asset": false
+    },
+    {
+      "id": "wireframe_light",
+      "file": "B7BE4FC2-C651-466B-BD8F-9CF9BC5DC0EE.jpeg",
+      "dimensions": "900x1600",
+      "role": "mapa estrutural claro",
+      "theme": "light",
+      "production_asset": false
+    },
+    {
+      "id": "darkmarblebackground_primary",
+      "file": "3330CA5A-63BE-4D25-8527-8ADDE08CAC4E.jpeg",
+      "dimensions": "740x1600",
+      "role": "background do tema escuro",
+      "theme": "dark",
+      "production_asset": true
+    },
+    {
+      "id": "darkmarblebackground_duplicate",
+      "file": "E69073D7-624A-4D36-A9B3-E08BB0D92ACC.jpeg",
+      "dimensions": "740x1600",
+      "role": "duplicata exata; não utilizar",
+      "theme": "dark",
+      "production_asset": false,
+      "duplicateof": "darkmarblebackgroundprimary"
+    },
+    {
+      "id": "lightmarblebackground",
+      "file": "C30DB2A4-757D-47D5-8D5C-3F332750EC84.jpeg",
+      "dimensions": "757x1600",
+      "role": "background do tema claro",
+      "theme": "light",
+      "production_asset": true
+    }
+  ],
+  "design_tokens": {
+    "light": {
+      "background": "#F6EEE4",
+      "surface": "#FBF2E6",
+      "surface_elevated": "#FFFFFF",
+      "text_primary": "#201A16",
+      "text_secondary": "#644F3F",
+      "gold": "#A27438",
+      "gold_highlight": "#DDBD90",
+      "border": "#E6D0B1",
+      "background_image": "/assets/backgrounds/marble-light.avif"
+    },
+    "dark": {
+      "background": "#020202",
+      "surface": "#0D0C0A",
+      "surface_elevated": "#15110D",
+      "text_primary": "#F4EADF",
+      "text_secondary": "#B6A391",
+      "gold": "#BE8F4D",
+      "gold_highlight": "#DDBD90",
+      "border": "#49392A",
+      "background_image": "/assets/backgrounds/marble-dark.avif"
+    },
+    "typography": {
+      "display": "Cormorant Garamond, serif",
+      "body": "Montserrat, sans-serif",
+      "heading_weight": 500,
+      "body_weight": 400,
+      "button_weight": 600,
+      "button_case": "uppercase"
+    },
+    "shape": {
+      "radius_small": "8px",
+      "radius_medium": "14px",
+      "radius_large": "20px",
+      "border_width": "1px"
+    },
+    "layout": {
+      "contentmaxwidth": "1280px",
+      "mobile_gutter": "20px",
+      "tablet_gutter": "32px",
+      "desktop_gutter": "48px",
+      "sectionspacingmobile": "64px",
+      "sectionspacingdesktop": "96px"
+    }
+  },
+  "semantic_structure": [
+    {
+      "tag": "header",
+      "component": "Header",
+      "contents": [
+        "menu",
+        "logo",
+        "theme toggle",
+        "CTA de avaliação"
+      ]
+    },
+    {
+      "tag": "main",
+      "component": "PageMain",
+      "children": [
+        "Hero",
+        "BenefitBar",
+        "BeforeAfterGallery",
+        "ServicesGrid",
+        "DifferentialsPanel",
+        "AboutSpecialists",
+        "TestimonialsCarousel",
+        "InspirationGallery",
+        "FinalCTA"
+      ]
+    },
+    {
+      "tag": "footer",
+      "component": "Footer",
+      "contents": [
+        "atendimento com hora marcada",
+        "localização",
+        "Instagram",
+        "WhatsApp"
+      ]
+    }
+  ],
+  "responsive_behavior": {
+    "breakpoints": {
+      "mobile": "0-767px",
+      "tablet": "768-1023px",
+      "desktop": "1024px+"
+    },
+    "mobile": {
+      "hero": "uma coluna; texto primeiro e imagem depois ou imagem parcialmente posicionada atrás do título",
+      "benefits": "grade 2x2 ou scroll horizontal",
+      "before_after": "um card por vez com scroll-snap",
+      "services": "duas colunas",
+      "differentials": "duas colunas",
+      "about": "foto, texto e números empilhados",
+      "testimonials": "um depoimento por vez",
+      "gallery": "scroll horizontal com miniaturas de 120px a 150px",
+      "final_cta": "texto e botão empilhados"
+    },
+    "tablet": {
+      "hero": "duas colunas",
+      "before_after": "dois cards visíveis",
+      "services": "três colunas",
+      "about": "duas colunas"
+    },
+    "desktop": {
+      "hero": "duas colunas 48/52",
+      "before_after": "três cards visíveis",
+      "services": "cinco colunas",
+      "differentials": "quatro colunas",
+      "about": "foto, narrativa e números em três áreas",
+      "testimonials": "dois cards visíveis",
+      "gallery": "oito miniaturas visíveis quando houver espaço"
+    }
+  },
+  "requiredindividualassets": [
+    {
+      "asset": "logo",
+      "variants": [
+        "logo-gold.svg",
+        "logo-dark.svg"
+      ]
+    },
+    {
+      "asset": "hero_model",
+      "variants": [
+        "hero-hair.avif",
+        "hero-hair.webp"
+      ],
+      "requirement": "recorte com fundo transparente ou máscara limpa"
+    },
+    {
+      "asset": "before_after",
+      "quantity": 6,
+      "organization": "três pares separados"
+    },
+    {
+      "asset": "specialists",
+      "quantity": 1,
+      "requirement": "foto horizontal ou recorte transparente"
+    },
+    {
+      "asset": "inspiration_gallery",
+      "quantity": 8
+    },
+    {
+      "asset": "icons",
+      "format": "svg",
+      "items": [
+        "WhatsApp",
+        "calendário",
+        "menu",
+        "técnica",
+        "diamante",
+        "coroa",
+        "mega hair",
+        "mechas",
+        "tratamentos",
+        "coloração",
+        "terapia capilar",
+        "naturalidade",
+        "personalização",
+        "experiência",
+        "Instagram",
+        "localização",
+        "setas"
+      ]
+    }
+  ],
+  "image_rules": {
+    "photography_formats": [
+      "avif",
+      "webp"
+    ],
+    "fallback": "jpeg",
+    "hero_loading": "eager",
+    "belowfoldloading": "lazy",
+    "responsive_images": true,
+    "use_srcset": true,
+    "decorativebackgroundalt": "",
+    "contentimagesalt": "descrição objetiva em português",
+    "avoidtextinside_images": true
+  },
+  "interaction_rules": {
+    "before_after": "controle arrastável acessível por toque e teclado",
+    "carousels": "scroll-snap com botões anterior/próximo",
+    "theme_toggle": "botão com aria-label e estado aria-pressed",
+    "whatsapp_cta": "link externo com mensagem pré-preenchida",
+    "reduced_motion": "respeitar prefers-reduced-motion",
+    "focus": "foco visível dourado com contraste suficiente"
+  },
+  "implementation_warning": [
+    "Não utilizar as composições completas como página rasterizada.",
+    "Não carregar as duas cópias idênticas do mármore escuro.",
+    "Não manter cinco colunas com textos minúsculos em telas estreitas.",
+    "Não usar somente a cor dourada para comunicar estados.",
+    "Não incorporar títulos, avaliações ou botões dentro das fotografias."
+  ]
+}
+`
+
+[USER]:
+Faça uma anilise ainda mais detalhada da posição posicionamento intem e localização de cada escrita e texto não prescisa escrever o conteúdo só deixar um código pra ele entender e n se refira a tom nesse nem as imagem pois eu enviarei a pasta de assets
+
+[CHATGPT]:
+Vou transformar a referência em uma especificação estrutural neutra: coordenadas, alinhamentos, largura, altura, hierarquia de textos, relação entre elementos, comportamento responsivo e nomes de slots para receber os arquivos da pasta de assets. O código não citará aparência, conteúdo textual específico nem arquivos de referência.
+
+[CHATGPT]:
+`json
+{
+  "document": {
+    "type": "responsivesinglepage_layout",
+    "language": "pt-BR",
+    "content_policy": {
+      "includefinalcopy": false,
+      "alltextis_placeholder": true,
+      "layoutindependentof_theme": true,
+      "externalassetsloaded_separately": true
+    },
+    "referencecoordinatesystem": {
+      "width": 728,
+      "height": 1536,
+      "unit": "px",
+      "positioning": "top-left-origin",
+      "x_axis": "left-to-right",
+      "y_axis": "top-to-bottom",
+      "note": "As coordenadas representam proporções de referência. Na implementação, usar fluxo normal, grid e flex; não posicionamento absoluto para a página inteira."
+    }
+  },
+  "global_layout": {
+    "page": {
+      "width": "100%",
+      "min_height": "100vh",
+      "overflow_x": "hidden"
+    },
+    "main_container": {
+      "width": "calc(100% - 80px)",
+      "max_width": "1280px",
+      "margin_inline": "auto",
+      "reference_left": 40,
+      "reference_right": 40
+    },
+    "wide_container": {
+      "width": "calc(100% - 54px)",
+      "max_width": "1340px",
+      "margin_inline": "auto",
+      "reference_left": 27,
+      "reference_right": 27
+    },
+    "text_rules": {
+      "headinglineheight": 0.96,
+      "bodylineheight": 1.35,
+      "labellineheight": 1.15,
+      "buttonlineheight": 1,
+      "paragraphmaxwidth": "65ch",
+      "prevent_orphans": true,
+      "text_wrap": "balance-for-headings-pretty-for-body"
+    },
+    "sectionheaderpattern": {
+      "layout": "horizontal-center",
+      "left_line": true,
+      "center_text": true,
+      "right_line": true,
+      "ornament_below": false,
+      "title_alignment": "center",
+      "lineverticalalignment": "center",
+      "titlepaddinginline": 14,
+      "line_flex": 1,
+      "linemaxwidth": 120
+    },
+    "stacking": {
+      "background": 0,
+      "section_content": 1,
+      "floating_controls": 3,
+      "navigation": 5
+    }
+  },
+  "typography_scale": {
+    "display": {
+      "desktop": "clamp(54px, 5.2vw, 78px)",
+      "tablet": "clamp(44px, 6.5vw, 62px)",
+      "mobile": "clamp(38px, 11vw, 52px)",
+      "line_height": 0.92
+    },
+    "section_title": {
+      "desktop": "clamp(28px, 2.4vw, 38px)",
+      "tablet": "clamp(26px, 3.8vw, 34px)",
+      "mobile": "clamp(24px, 7vw, 30px)",
+      "line_height": 1
+    },
+    "card_title": {
+      "desktop": "clamp(15px, 1.2vw, 18px)",
+      "tablet": "16px",
+      "mobile": "15px",
+      "line_height": 1.1
+    },
+    "body_large": {
+      "desktop": "18px",
+      "tablet": "17px",
+      "mobile": "16px",
+      "line_height": 1.45
+    },
+    "body": {
+      "desktop": "16px",
+      "tablet": "15px",
+      "mobile": "14px",
+      "line_height": 1.45
+    },
+    "body_small": {
+      "desktop": "14px",
+      "tablet": "13px",
+      "mobile": "12px",
+      "line_height": 1.35
+    },
+    "micro": {
+      "desktop": "12px",
+      "tablet": "11px",
+      "mobile": "10px",
+      "line_height": 1.25
+    },
+    "button": {
+      "desktop": "14px",
+      "tablet": "13px",
+      "mobile": "12px",
+      "line_height": 1
+    }
+  },
+  "sections": [
+    {
+      "id": "site_header",
+      "semantic_tag": "header",
+      "reference_box": {
+        "x": 27,
+        "y": 24,
+        "width": 674,
+        "height": 66,
+        "x_percent": 3.71,
+        "y_percent": 1.56,
+        "width_percent": 92.58,
+        "height_percent": 4.3
+      },
+      "layout": {
+        "display": "grid",
+        "columns": "40px minmax(180px, 1fr) auto",
+        "align_items": "center",
+        "column_gap": 16
+      },
+      "items": [
+        {
+          "id": "menu_trigger",
+          "type": "control",
+          "reference_box": {
+            "x": 27,
+            "y": 43,
+            "width": 21,
+            "height": 21
+          },
+          "alignment": "left-center",
+          "clicktargetminimum": "44px",
+          "text": null
+        },
+        {
+          "id": "brand_slot",
+          "type": "nontextslot",
+          "reference_box": {
+            "x": 75,
+            "y": 29,
+            "width": 245,
+            "height": 57
+          },
+          "alignment": "left-center",
+          "max_width": "250px"
+        },
+        {
+          "id": "header_cta",
+          "type": "button",
+          "reference_box": {
+            "x": 551,
+            "y": 35,
+            "width": 148,
+            "height": 29
+          },
+          "text_slot": {
+            "id": "headerctalabel",
+            "content": "{{HEADERCTALABEL}}",
+            "alignment": "center",
+            "vertical_alignment": "middle",
+            "max_lines": 1,
+            "text_style": "button"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 40,
+        "y": 48,
+        "width": 620,
+        "height": 301,
+        "x_percent": 5.49,
+        "y_percent": 3.13,
+        "width_percent": 85.16,
+        "height_percent": 19.6
+      },
+      "layout": {
+        "display": "grid",
+        "columns": "47% 53%",
+        "align_items": "center",
+        "position": "relative"
+      },
+      "text_column": {
+        "reference_box": {
+          "x": 40,
+          "y": 119,
+          "width": 326,
+          "height": 216
+        },
+        "alignment": "left",
+        "vertical_alignment": "center",
+        "items": [
+          {
+            "id": "hero_eyebrow",
+            "type": "text",
+            "content": "{{HERO_EYEBROW}}",
+            "reference_box": {
+              "x": 40,
+              "y": 120,
+              "width": 275,
+              "height": 25
+            },
+            "text_style": "micro",
+            "alignment": "left",
+            "max_lines": 2,
+            "linebreakbehavior": "allow",
+            "margin_bottom": 13
+          },
+          {
+            "id": "hero_title",
+            "type": "heading",
+            "semantic_tag": "h1",
+            "content": "{{HERO_TITLE}}",
+            "reference_box": {
+              "x": 40,
+              "y": 161,
+              "width": 326,
+              "height": 76
+            },
+            "text_style": "display",
+            "alignment": "left",
+            "max_lines": 2,
+            "linebreakbehavior": "controlled",
+            "preferredlinepattern": [
+              "{{HEROTITLELINE_1}}",
+              "{{HEROTITLELINE_2}}"
+            ],
+            "margin_bottom": 14
+          },
+          {
+            "id": "hero_description",
+            "type": "text",
+            "content": "{{HERO_DESCRIPTION}}",
+            "reference_box": {
+              "x": 40,
+              "y": 256,
+              "width": 260,
+              "height": 31
+            },
+            "textstyle": "bodysmall",
+            "alignment": "left",
+            "max_lines": 2,
+            "linebreakbehavior": "natural",
+            "margin_bottom": 17
+          },
+          {
+            "id": "hero_cta",
+            "type": "button",
+            "reference_box": {
+              "x": 40,
+              "y": 300,
+              "width": 178,
+              "height": 34
+            },
+            "min_height": 44,
+            "text_slot": {
+              "id": "heroctalabel",
+              "content": "{{HEROCTALABEL}}",
+              "alignment": "center",
+              "vertical_alignment": "middle",
+              "max_lines": 1,
+              "text_style": "button"
+            }
+          }
+        ]
+      },
+      "secondary_column": {
+        "id": "heroexternalslot",
+        "type": "nontextslot",
+        "reference_box": {
+          "x": 375,
+          "y": 48,
+          "width": 285,
+          "height": 301
+        },
+        "alignment": "right-bottom",
+        "overflow": "visible",
+        "object_fit": "contain",
+        "object_position": "center bottom"
+      }
+    },
+    {
+      "id": "benefits_bar",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 27,
+        "y": 352,
+        "width": 674,
+        "height": 37,
+        "x_percent": 3.71,
+        "y_percent": 22.92,
+        "width_percent": 92.58,
+        "height_percent": 2.41
+      },
+      "layout": {
+        "display": "grid",
+        "columns": "repeat(4, 1fr)",
+        "align_items": "center",
+        "padding_inline": 20,
+        "column_dividers": true
+      },
+      "repeat": {
+        "count": 4,
+        "item_width": 158,
+        "item_height": 37,
+        "gap": 0,
+        "item_layout": "icon-left-text-right"
+      },
+      "text_slots": [
+        {
+          "id": "benefit1label",
+          "content": "{{BENEFIT1LABEL}}",
+          "alignment": "left",
+          "max_lines": 1,
+          "text_style": "micro"
+        },
+        {
+          "id": "benefit2label",
+          "content": "{{BENEFIT2LABEL}}",
+          "alignment": "left",
+          "max_lines": 1,
+          "text_style": "micro"
+        },
+        {
+          "id": "benefit3label",
+          "content": "{{BENEFIT3LABEL}}",
+          "alignment": "left",
+          "max_lines": 1,
+          "text_style": "micro"
+        },
+        {
+          "id": "benefit4label",
+          "content": "{{BENEFIT4LABEL}}",
+          "alignment": "left",
+          "max_lines": 1,
+          "text_style": "micro"
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 40,
+        "y": 404,
+        "width": 648,
+        "height": 238,
+        "x_percent": 5.49,
+        "y_percent": 26.3,
+        "width_percent": 89.01,
+        "height_percent": 15.49
+      },
+      "header": {
+        "reference_box": {
+          "x": 159,
+          "y": 405,
+          "width": 411,
+          "height": 42
+        },
+        "alignment": "center",
+        "items": [
+          {
+            "id": "results_title",
+            "type": "heading",
+            "semantic_tag": "h2",
+            "content": "{{RESULTS_TITLE}}",
+            "reference_box": {
+              "x": 185,
+              "y": 406,
+              "width": 360,
+              "height": 21
+            },
+            "textstyle": "sectiontitle",
+            "alignment": "center",
+            "max_lines": 1
+          },
+          {
+            "id": "results_subtitle",
+            "type": "text",
+            "content": "{{RESULTS_SUBTITLE}}",
+            "reference_box": {
+              "x": 212,
+              "y": 435,
+              "width": 305,
+              "height": 12
+            },
+            "text_style": "micro",
+            "alignment": "center",
+            "max_lines": 1,
+            "margin_top": 7
+          }
+        ]
+      },
+      "carousel": {
+        "reference_box": {
+          "x": 48,
+          "y": 455,
+          "width": 632,
+          "height": 154
+        },
+        "display": "grid",
+        "columns": "repeat(3, 1fr)",
+        "gap": 11,
+        "navigation_position": "middle-sides",
+        "items": [
+          {
+            "id": "resultcard1",
+            "reference_box": {
+              "x": 48,
+              "y": 455,
+              "width": 203,
+              "height": 154
+            }
+          },
+          {
+            "id": "resultcard2",
+            "reference_box": {
+              "x": 263,
+              "y": 455,
+              "width": 200,
+              "height": 154
+            }
+          },
+          {
+            "id": "resultcard3",
+            "reference_box": {
+              "x": 474,
+              "y": 455,
+              "width": 206,
+              "height": 154
+            }
+          }
+        ],
+        "card_template": {
+          "columns": "1fr 1fr",
+          "position": "relative",
+          "bottom_labels": [
+            {
+              "idpattern": "result{index}leftlabel",
+              "content": "{{RESULT{INDEX}LEFT_LABEL}}",
+              "position": "bottom-left-half",
+              "alignment": "center",
+              "text_style": "micro",
+              "max_lines": 1
+            },
+            {
+              "idpattern": "result{index}rightlabel",
+              "content": "{{RESULT{INDEX}RIGHT_LABEL}}",
+              "position": "bottom-right-half",
+              "alignment": "center",
+              "text_style": "micro",
+              "max_lines": 1
+            }
+          ],
+          "center_control": {
+            "position": "absolute-center",
+            "clicktargetminimum": "44px",
+            "text": null
+          }
+        }
+      },
+      "cta": {
+        "id": "results_cta",
+        "reference_box": {
+          "x": 263,
+          "y": 616,
+          "width": 201,
+          "height": 24
+        },
+        "alignment": "center",
+        "min_height": 40,
+        "text_slot": {
+          "id": "resultsctalabel",
+          "content": "{{RESULTSCTALABEL}}",
+          "alignment": "center",
+          "vertical_alignment": "middle",
+          "max_lines": 1,
+          "text_style": "micro"
+        }
+      }
+    },
+    {
+      "id": "services",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 53,
+        "y": 651,
+        "width": 622,
+        "height": 126,
+        "x_percent": 7.28,
+        "y_percent": 42.38,
+        "width_percent": 85.44,
+        "height_percent": 8.2
+      },
+      "header": {
+        "id": "services_title",
+        "type": "heading",
+        "semantic_tag": "h2",
+        "content": "{{SERVICES_TITLE}}",
+        "reference_box": {
+          "x": 286,
+          "y": 651,
+          "width": 156,
+          "height": 22
+        },
+        "alignment": "center",
+        "textstyle": "sectiontitle",
+        "max_lines": 1,
+        "separator_pattern": true
+      },
+      "grid": {
+        "reference_box": {
+          "x": 61,
+          "y": 677,
+          "width": 606,
+          "height": 100
+        },
+        "display": "grid",
+        "columns": "repeat(5, 1fr)",
+        "gap": 16,
+        "align_items": "start",
+        "cards": [
+          {
+            "id": "service_1",
+            "center_x": 111
+          },
+          {
+            "id": "service_2",
+            "center_x": 238
+          },
+          {
+            "id": "service_3",
+            "center_x": 365
+          },
+          {
+            "id": "service_4",
+            "center_x": 492
+          },
+          {
+            "id": "service_5",
+            "center_x": 619
+          }
+        ],
+        "card_template": {
+          "text_alignment": "center",
+          "title": {
+            "contentpattern": "{{SERVICE{INDEX}_TITLE}}",
+            "margin_top": 8,
+            "max_lines": 1,
+            "textstyle": "cardtitle"
+          },
+          "description": {
+            "contentpattern": "{{SERVICE{INDEX}_DESCRIPTION}}",
+            "margin_top": 4,
+            "max_lines": 3,
+            "text_style": "micro",
+            "max_width": "110px"
+          }
+        }
+      }
+    },
+    {
+      "id": "differentials",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 51,
+        "y": 794,
+        "width": 626,
+        "height": 113,
+        "x_percent": 7.01,
+        "y_percent": 51.69,
+        "width_percent": 85.99,
+        "height_percent": 7.36
+      },
+      "container": {
+        "padding_top": 24,
+        "padding_bottom": 13,
+        "padding_inline": 25,
+        "position": "relative"
+      },
+      "header": {
+        "id": "differentials_title",
+        "type": "heading",
+        "semantic_tag": "h2",
+        "content": "{{DIFFERENTIALS_TITLE}}",
+        "reference_box": {
+          "x": 262,
+          "y": 786,
+          "width": 206,
+          "height": 23
+        },
+        "position": "overlapping-top-border",
+        "alignment": "center",
+        "textstyle": "sectiontitle",
+        "max_lines": 1
+      },
+      "grid": {
+        "display": "grid",
+        "columns": "repeat(4, 1fr)",
+        "gap": 22,
+        "reference_box": {
+          "x": 74,
+          "y": 817,
+          "width": 580,
+          "height": 75
+        },
+        "card_template": {
+          "text_alignment": "center",
+          "title": {
+            "contentpattern": "{{DIFFERENTIAL{INDEX}_TITLE}}",
+            "margin_top": 5,
+            "max_lines": 1,
+            "text_style": "micro"
+          },
+          "description": {
+            "contentpattern": "{{DIFFERENTIAL{INDEX}_DESCRIPTION}}",
+            "margin_top": 5,
+            "max_lines": 3,
+            "text_style": "micro"
+          }
+        }
+      }
+    },
+    {
+      "id": "institutional",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 48,
+        "y": 916,
+        "width": 632,
+        "height": 264,
+        "x_percent": 6.59,
+        "y_percent": 59.64,
+        "width_percent": 86.81,
+        "height_percent": 17.19
+      },
+      "layout": {
+        "display": "grid",
+        "columns": "38% 43% 19%",
+        "align_items": "stretch",
+        "column_gap": 0
+      },
+      "left_slot": {
+        "id": "institutionalexternalslot",
+        "type": "nontextslot",
+        "reference_box": {
+          "x": 48,
+          "y": 917,
+          "width": 240,
+          "height": 262
+        }
+      },
+      "content_column": {
+        "reference_box": {
+          "x": 294,
+          "y": 922,
+          "width": 245,
+          "height": 251
+        },
+        "padding": {
+          "top": 3,
+          "right": 16,
+          "bottom": 8,
+          "left": 0
+        },
+        "text_alignment": "left",
+        "items": [
+          {
+            "id": "institutional_title",
+            "type": "heading",
+            "semantic_tag": "h2",
+            "content": "{{INSTITUTIONAL_TITLE}}",
+            "reference_box": {
+              "x": 294,
+              "y": 923,
+              "width": 229,
+              "height": 52
+            },
+            "textstyle": "sectiontitle",
+            "max_lines": 3,
+            "linebreakbehavior": "controlled",
+            "preferredlinepattern": [
+              "{{INSTITUTIONALTITLELINE_1}}",
+              "{{INSTITUTIONALTITLELINE_2}}",
+              "{{INSTITUTIONALTITLELINE_3}}"
+            ],
+            "margin_bottom": 4
+          },
+          {
+            "id": "institutional_signature",
+            "type": "text",
+            "content": "{{INSTITUTIONAL_SIGNATURE}}",
+            "reference_box": {
+              "x": 294,
+              "y": 978,
+              "width": 145,
+              "height": 14
+            },
+            "textstyle": "bodysmall",
+            "max_lines": 1,
+            "margin_bottom": 7
+          },
+          {
+            "id": "institutionalparagraph1",
+            "type": "text",
+            "content": "{{INSTITUTIONALPARAGRAPH1}}",
+            "reference_box": {
+              "x": 294,
+              "y": 998,
+              "width": 230,
+              "height": 45
+            },
+            "text_style": "micro",
+            "max_lines": 5,
+            "margin_bottom": 6
+          },
+          {
+            "id": "institutionalparagraph2",
+            "type": "text",
+            "content": "{{INSTITUTIONALPARAGRAPH2}}",
+            "reference_box": {
+              "x": 294,
+              "y": 1048,
+              "width": 230,
+              "height": 36
+            },
+            "text_style": "micro",
+            "max_lines": 4,
+            "margin_bottom": 5
+          },
+          {
+            "id": "institutional_emphasis",
+            "type": "text",
+            "content": "{{INSTITUTIONAL_EMPHASIS}}",
+            "reference_box": {
+              "x": 294,
+              "y": 1089,
+              "width": 230,
+              "height": 14
+            },
+            "text_style": "micro",
+            "weight": "emphasized",
+            "max_lines": 1,
+            "margin_bottom": 8
+          },
+          {
+            "id": "institutional_quote",
+            "type": "blockquote",
+            "reference_box": {
+              "x": 294,
+              "y": 1108,
+              "width": 225,
+              "height": 61
+            },
+            "padding": {
+              "top": 11,
+              "right": 12,
+              "bottom": 10,
+              "left": 22
+            },
+            "items": [
+              {
+                "id": "institutionalquoteline_1",
+                "content": "{{INSTITUTIONALQUOTELINE_1}}",
+                "alignment": "left",
+                "max_lines": 1,
+                "textstyle": "bodysmall"
+              },
+              {
+                "id": "institutionalquoteline_2",
+                "content": "{{INSTITUTIONALQUOTELINE_2}}",
+                "alignment": "left",
+                "max_lines": 1,
+                "textstyle": "bodysmall"
+              }
+            ]
+          }
+        ]
+      },
+      "stats_column": {
+        "reference_box": {
+          "x": 555,
+          "y": 916,
+          "width": 124,
+          "height": 264
+        },
+        "display": "grid",
+        "rows": "1fr auto 1fr auto",
+        "align_items": "center",
+        "text_alignment": "center",
+        "items": [
+          {
+            "id": "stat1value",
+            "content": "{{STAT1VALUE}}",
+            "textstyle": "sectiontitle",
+            "max_lines": 1
+          },
+          {
+            "id": "stat1label",
+            "content": "{{STAT1LABEL}}",
+            "text_style": "micro",
+            "max_lines": 3,
+            "max_width": "90px"
+          },
+          {
+            "id": "stat2value",
+            "content": "{{STAT2VALUE}}",
+            "textstyle": "sectiontitle",
+            "max_lines": 1
+          },
+          {
+            "id": "stat2label",
+            "content": "{{STAT2LABEL}}",
+            "text_style": "micro",
+            "max_lines": 3,
+            "max_width": "90px"
+          },
+          {
+            "id": "statsfooterlabel",
+            "content": "{{STATSFOOTERLABEL}}",
+            "textstyle": "bodysmall",
+            "max_lines": 2,
+            "alignment": "center"
+          }
+        ]
+      }
+    },
+    {
+      "id": "testimonials",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 49,
+        "y": 1196,
+        "width": 630,
+        "height": 121,
+        "x_percent": 6.73,
+        "y_percent": 77.86,
+        "width_percent": 86.54,
+        "height_percent": 7.88
+      },
+      "header": {
+        "id": "testimonials_title",
+        "type": "heading",
+        "semantic_tag": "h2",
+        "content": "{{TESTIMONIALS_TITLE}}",
+        "reference_box": {
+          "x": 163,
+          "y": 1197,
+          "width": 404,
+          "height": 22
+        },
+        "alignment": "center",
+        "textstyle": "sectiontitle",
+        "max_lines": 1,
+        "separator_pattern": true
+      },
+      "carousel": {
+        "reference_box": {
+          "x": 93,
+          "y": 1224,
+          "width": 543,
+          "height": 88
+        },
+        "display": "grid",
+        "columns": "repeat(2, 1fr)",
+        "gap": 16,
+        "navigation": {
+          "previous": {
+            "reference_box": {
+              "x": 49,
+              "y": 1249,
+              "width": 28,
+              "height": 28
+            },
+            "text": null
+          },
+          "next": {
+            "reference_box": {
+              "x": 652,
+              "y": 1249,
+              "width": 28,
+              "height": 28
+            },
+            "text": null
+          }
+        },
+        "card_template": {
+          "min_height": 88,
+          "padding": {
+            "top": 12,
+            "right": 15,
+            "bottom": 10,
+            "left": 44
+          },
+          "text_alignment": "left",
+          "items": [
+            {
+              "idpattern": "testimonial{index}_rating",
+              "content": "{{TESTIMONIAL{INDEX}RATING}}",
+              "position": "top-left-after-leading-slot",
+              "textstyle": "bodysmall",
+              "max_lines": 1
+            },
+            {
+              "idpattern": "testimonial{index}_body",
+              "content": "{{TESTIMONIAL{INDEX}BODY}}",
+              "position": "middle",
+              "margin_top": 5,
+              "text_style": "micro",
+              "max_lines": 4
+            },
+            {
+              "idpattern": "testimonial{index}_meta",
+              "content": "{{TESTIMONIAL{INDEX}META}}",
+              "position": "bottom",
+              "margin_top": 4,
+              "text_style": "micro",
+              "max_lines": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "inspiration",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 40,
+        "y": 1328,
+        "width": 648,
+        "height": 134,
+        "x_percent": 5.49,
+        "y_percent": 86.46,
+        "width_percent": 89.01,
+        "height_percent": 8.72
+      },
+      "header": {
+        "id": "inspiration_title",
+        "type": "heading",
+        "semantic_tag": "h2",
+        "content": "{{INSPIRATION_TITLE}}",
+        "reference_box": {
+          "x": 193,
+          "y": 1329,
+          "width": 342,
+          "height": 20
+        },
+        "alignment": "center",
+        "textstyle": "sectiontitle",
+        "max_lines": 1,
+        "separator_pattern": true
+      },
+      "externalslotsrow": {
+        "reference_box": {
+          "x": 40,
+          "y": 1353,
+          "width": 648,
+          "height": 75
+        },
+        "display": "grid",
+        "columns": "repeat(8, 1fr)",
+        "gap": 7,
+        "count": 8,
+        "slotaspectratio": "0.95 / 1",
+        "overflow_behavior": "horizontal-scroll-on-small-screen"
+      },
+      "profile_link": {
+        "reference_box": {
+          "x": 293,
+          "y": 1434,
+          "width": 143,
+          "height": 25
+        },
+        "alignment": "center",
+        "text_slot": {
+          "id": "profilelinklabel",
+          "content": "{{PROFILELINKLABEL}}",
+          "alignment": "center",
+          "vertical_alignment": "middle",
+          "max_lines": 1,
+          "text_style": "micro"
+        }
+      }
+    },
+    {
+      "id": "final_cta",
+      "semantic_tag": "section",
+      "reference_box": {
+        "x": 40,
+        "y": 1463,
+        "width": 608,
+        "height": 51,
+        "x_percent": 5.49,
+        "y_percent": 95.25,
+        "width_percent": 83.52,
+        "height_percent": 3.32
+      },
+      "layout": {
+        "display": "grid",
+        "columns": "58% 42%",
+        "align_items": "center",
+        "column_gap": 22
+      },
+      "text_column": {
+        "items": [
+          {
+            "id": "finalctatitle",
+            "type": "heading",
+            "semantic_tag": "h2",
+            "content": "{{FINALCTATITLE}}",
+            "reference_box": {
+              "x": 40,
+              "y": 1455,
+              "width": 356,
+              "height": 38
+            },
+            "alignment": "left",
+            "textstyle": "sectiontitle",
+            "max_lines": 2,
+            "linebreakbehavior": "controlled",
+            "preferredlinepattern": [
+              "{{FINALCTATITLELINE1}}",
+              "{{FINALCTATITLELINE2}}"
+            ]
+          },
+          {
+            "id": "finalctadescription",
+            "type": "text",
+            "content": "{{FINALCTADESCRIPTION}}",
+            "reference_box": {
+              "x": 40,
+              "y": 1493,
+              "width": 360,
+              "height": 23
+            },
+            "alignment": "left",
+            "text_style": "micro",
+            "max_lines": 2,
+            "margin_top": 3
+          }
+        ]
+      },
+      "button": {
+        "id": "finalctabutton",
+        "reference_box": {
+          "x": 427,
+          "y": 1468,
+          "width": 221,
+          "height": 34
+        },
+        "min_height": 44,
+        "text_slot": {
+          "id": "finalctabutton_label",
+          "content": "{{FINALCTABUTTON_LABEL}}",
+          "alignment": "center",
+          "vertical_alignment": "middle",
+          "text_style": "button",
+          "max_lines": 1
+        }
+      }
+    },
+    {
+      "id": "site_footer",
+      "semantic_tag": "footer",
+      "reference_box": {
+        "x": 57,
+        "y": 1516,
+        "width": 615,
+        "height": 20,
+        "x_percent": 7.83,
+        "y_percent": 98.7,
+        "width_percent": 84.48,
+        "height_percent": 1.3
+      },
+      "layout": {
+        "display": "grid",
+        "columns": "repeat(3, 1fr)",
+        "align_items": "center",
+        "column_dividers": true
+      },
+      "items": [
+        {
+          "id": "footerinfo1",
+          "content": "{{FOOTERINFO1}}",
+          "alignment": "center",
+          "text_style": "micro",
+          "max_lines": 1
+        },
+        {
+          "id": "footerinfo2",
+          "content": "{{FOOTERINFO2}}",
+          "alignment": "center",
+          "text_style": "micro",
+          "max_lines": 1
+        },
+        {
+          "id": "footerinfo3",
+          "content": "{{FOOTERINFO3}}",
+          "alignment": "center",
+          "text_style": "micro",
+          "max_lines": 2
+        }
+      ]
+    }
+  ],
+  "responsive_rules": {
+    "mobile": {
+      "query": "max-width: 599px",
+      "containerpaddinginline": 20,
+      "section_gap": 64,
+      "header": {
+        "columns": "44px 1fr auto",
+        "brandmaxwidth": "170px",
+        "cta_behavior": "compact-or-icon-with-accessible-label"
+      },
+      "hero": {
+        "columns": "1fr",
+        "min_height": "auto",
+        "text_order": 1,
+        "secondaryslotorder": 2,
+        "text_alignment": "left",
+        "titlemaxwidth": "11ch",
+        "descriptionmaxwidth": "32ch",
+        "cta_width": "100%",
+        "row_gap": 24
+      },
+      "benefits_bar": {
+        "columns": "repeat(2, minmax(0, 1fr))",
+        "rows": 2,
+        "itemminheight": 64
+      },
+      "results": {
+        "headertitlemax_lines": 2,
+        "headersubtitlemax_lines": 3,
+        "carousel_columns": "none",
+        "card_width": "min(84vw, 340px)",
+        "overflow_x": "auto",
+        "scroll_snap": "x mandatory",
+        "cta_width": "100%"
+      },
+      "services": {
+        "columns": "repeat(2, minmax(0, 1fr))",
+        "gap": "28px 16px",
+        "lastitemalignment": "center-across-grid"
+      },
+      "differentials": {
+        "columns": "1fr",
+        "gap": 24,
+        "header_position": "normal-flow",
+        "cardtextmax_width": "34ch"
+      },
+      "institutional": {
+        "columns": "1fr",
+        "leftslotorder": 1,
+        "content_order": 2,
+        "stats_order": 3,
+        "content_padding": "28px 20px",
+        "stats_columns": "repeat(2, 1fr)",
+        "stats_rows": "auto",
+        "titlemaxwidth": "15ch"
+      },
+      "testimonials": {
+        "carousel_columns": "none",
+        "card_width": "calc(100vw - 64px)",
+        "overflow_x": "auto",
+        "scroll_snap": "x mandatory",
+        "navigation_position": "below-carousel"
+      },
+      "inspiration": {
+        "columns": "none",
+        "slot_width": "120px",
+        "overflow_x": "auto",
+        "scroll_snap": "x proximity",
+        "profilelinkposition": "center-below"
+      },
+      "final_cta": {
+        "columns": "1fr",
+        "text_alignment": "left",
+        "button_width": "100%",
+        "row_gap": 20
+      },
+      "footer": {
+        "columns": "1fr",
+        "row_gap": 12,
+        "column_dividers": false
+      }
+    },
+    "tablet": {
+      "query": "min-width: 600px and max-width: 1023px",
+      "containerpaddinginline": 32,
+      "section_gap": 76,
+      "hero": {
+        "columns": "46% 54%"
+      },
+      "benefits_bar": {
+        "columns": "repeat(4, 1fr)"
+      },
+      "results": {
+        "visible_cards": 2,
+        "card_width": "calc((100% - 16px) / 2)",
+        "overflow_x": "auto"
+      },
+      "services": {
+        "columns": "repeat(3, 1fr)"
+      },
+      "differentials": {
+        "columns": "repeat(2, 1fr)"
+      },
+      "institutional": {
+        "columns": "42% 58%",
+        "stats_position": "full-width-below"
+      },
+      "testimonials": {
+        "visible_cards": 2
+      },
+      "inspiration": {
+        "visible_slots": 5,
+        "overflow_x": "auto"
+      }
+    },
+    "desktop": {
+      "query": "min-width: 1024px",
+      "containerpaddinginline": 48,
+      "section_gap": 88,
+      "hero": {
+        "columns": "47% 53%"
+      },
+      "benefits_bar": {
+        "columns": "repeat(4, 1fr)"
+      },
+      "results": {
+        "columns": "repeat(3, 1fr)",
+        "visible_cards": 3
+      },
+      "services": {
+        "columns": "repeat(5, 1fr)"
+      },
+      "differentials": {
+        "columns": "repeat(4, 1fr)"
+      },
+      "institutional": {
+        "columns": "38% 43% 19%"
+      },
+      "testimonials": {
+        "columns": "repeat(2, 1fr)"
+      },
+      "inspiration": {
+        "columns": "repeat(8, 1fr)"
+      },
+      "final_cta": {
+        "columns": "58% 42%"
+      },
+      "footer": {
+        "columns": "repeat(3, 1fr)"
+      }
+    }
+  },
+  "textslotregistry": [
+    "{{HEADERCTALABEL}}",
+    "{{HERO_EYEBROW}}",
+    "{{HERO_TITLE}}",
+    "{{HEROTITLELINE_1}}",
+    "{{HEROTITLELINE_2}}",
+    "{{HERO_DESCRIPTION}}",
+    "{{HEROCTALABEL}}",
+    "{{BENEFIT1LABEL}}",
+    "{{BENEFIT2LABEL}}",
+    "{{BENEFIT3LABEL}}",
+    "{{BENEFIT4LABEL}}",
+    "{{RESULTS_TITLE}}",
+    "{{RESULTS_SUBTITLE}}",
+    "{{RESULT1LEFT_LABEL}}",
+    "{{RESULT1RIGHT_LABEL}}",
+    "{{RESULT2LEFT_LABEL}}",
+    "{{RESULT2RIGHT_LABEL}}",
+    "{{RESULT3LEFT_LABEL}}",
+    "{{RESULT3RIGHT_LABEL}}",
+    "{{RESULTSCTALABEL}}",
+    "{{SERVICES_TITLE}}",
+    "{{SERVICE1TITLE}}",
+    "{{SERVICE1DESCRIPTION}}",
+    "{{SERVICE2TITLE}}",
+    "{{SERVICE2DESCRIPTION}}",
+    "{{SERVICE3TITLE}}",
+    "{{SERVICE3DESCRIPTION}}",
+    "{{SERVICE4TITLE}}",
+    "{{SERVICE4DESCRIPTION}}",
+    "{{SERVICE5TITLE}}",
+    "{{SERVICE5DESCRIPTION}}",
+    "{{DIFFERENTIALS_TITLE}}",
+    "{{DIFFERENTIAL1TITLE}}",
+    "{{DIFFERENTIAL1DESCRIPTION}}",
+    "{{DIFFERENTIAL2TITLE}}",
+    "{{DIFFERENTIAL2DESCRIPTION}}",
+    "{{DIFFERENTIAL3TITLE}}",
+    "{{DIFFERENTIAL3DESCRIPTION}}",
+    "{{DIFFERENTIAL4TITLE}}",
+    "{{DIFFERENTIAL4DESCRIPTION}}",
+    "{{INSTITUTIONAL_TITLE}}",
+    "{{INSTITUTIONAL_SIGNATURE}}",
+    "{{INSTITUTIONALPARAGRAPH1}}",
+    "{{INSTITUTIONALPARAGRAPH2}}",
+    "{{INSTITUTIONAL_EMPHASIS}}",
+    "{{INSTITUTIONALQUOTELINE_1}}",
+    "{{INSTITUTIONALQUOTELINE_2}}",
+    "{{STAT1VALUE}}",
+    "{{STAT1LABEL}}",
+    "{{STAT2VALUE}}",
+    "{{STAT2LABEL}}",
+    "{{STATSFOOTERLABEL}}",
+    "{{TESTIMONIALS_TITLE}}",
+    "{{TESTIMONIAL1RATING}}",
+    "{{TESTIMONIAL1BODY}}",
+    "{{TESTIMONIAL1META}}",
+    "{{TESTIMONIAL2RATING}}",
+    "{{TESTIMONIAL2BODY}}",
+    "{{TESTIMONIAL2META}}",
+    "{{INSPIRATION_TITLE}}",
+    "{{PROFILELINKLABEL}}",
+    "{{FINALCTATITLE}}",
+    "{{FINALCTATITLELINE1}}",
+    "{{FINALCTATITLELINE2}}",
+    "{{FINALCTADESCRIPTION}}",
+    "{{FINALCTABUTTON_LABEL}}",
+    "{{FOOTERINFO1}}",
+    "{{FOOTERINFO2}}",
+    "{{FOOTERINFO3}}"
+  ],
+  "implementation_constraints": {
+    "semantic_headings": {
+      "single_h1": true,
+      "sectiontitlesuse_h2": true,
+      "cardtitlesuse_h3": true
+    },
+    "positioning": {
+      "page_sections": "normal-flow",
+      "allowedabsolutepositioning": [
+        "small controls inside cards",
+        "decorative separators",
+        "overlapping section labels",
+        "local slot overlays"
+      ],
+      "forbiddenabsolutepositioning": [
+        "entire page",
+        "all text blocks",
+        "responsive section stacking"
+      ]
+    },
+    "accessibility": {
+      "minimumtouchtarget": "44px",
+      "keyboard_navigation": true,
+      "visible_focus": true,
+      "carousel_announcements": true,
+      "controlsrequirearia_labels": true,
+      "decorativeelementshiddenfromscreen_readers": true
+    },
+    "content_safety": {
+      "donothardcodelinebreaksinbody_copy": true,
+      "allowcontrolledbreaksindisplay_titles": true,
+      "preventtextoverflow": true,
+      "allowcardstogrowvertically": true,
+      "neverclipbody_text": true
+    }
+  }
+}
+`
+
+
+---
+Exported with AI Toolbox - Install free: https://ai-toolbox.co
